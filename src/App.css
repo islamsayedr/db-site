@@ -1,0 +1,51 @@
+/* Targeting WebKit browsers */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Width of the scrollbar */
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+    background-color: #ffffff00;
+    /* Background color of the track */
+}
+
+/* Handle (thumb) */
+::-webkit-scrollbar-thumb {
+    background-color: var(--brandDark);
+    /* Color of the thumb */
+    border-radius: 50px;
+    /* Rounded corners of the thumb */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--brandMain);
+    /* Color of the thumb on hover */
+}
+
+/* Buttons (arrows) */
+::-webkit-scrollbar-button {
+    display: none;
+    /* Hide the scrollbar arrows (may not be supported in all browsers) */
+}
+
+#nav .navLink a.active {
+    color: var(--white);
+}
+#sideBar ul li a.active {
+    color: var(--white);
+    background-color: var(--brandMain);
+}
+#nav .navLink a.active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    padding: .75px 18px;
+    background-color: var(--brandLight);
+    bottom: 16px;
+}
+
+#headerPlace{
+    height: 72px;
+}

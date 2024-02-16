@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 16px;
+    border-radius: 15px;
+    border: 1px dashed var(--b16);
+    background: var(--white);
+    flex: 1;
+
+}
+
+.icon {
+    border: 1px dashed var(--b32);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

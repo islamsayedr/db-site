@@ -1,0 +1,35 @@
+.sec {
+    background-color: var(--bg);
+}
+
+.container {
+    gap: 32px;
+}
+
+.title {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.container p {
+    width: 100%;
+    max-width: 900px;
+}
+
+.cardSection {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    overflow-x: auto;
+
+}
+
+.cardsContainer{
+    display: flex;
+    gap: 8px;
+    padding-bottom: 16px;
+}
