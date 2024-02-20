@@ -7,17 +7,17 @@ import Pricing from "../comp/Priceing";
 import Review from "../comp/Review";
 import LatestArticles from "../comp/LatestArticles";
 
-export default function Home() {
+export default function Home({baseURL}) {
   return (
     <>
       <Hero />
       <Whydb />
       <Process />
-      <LatestProjects />
+      <LatestProjects baseURL = {baseURL}/>
       <JoinUs />
       <Pricing />
-      <Review />
-      <LatestArticles />
+      <Review baseURL={baseURL}/>
+      {/* <LatestArticles /> */}
     </>
   );
 }

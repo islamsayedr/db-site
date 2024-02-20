@@ -12,7 +12,7 @@ export default function Hero() {
             لشركتك. ركز على البزنس وخل التقنيه علينا.
           </p>
         </div>
-        <Btn text="ابدأ الان" />
+        <Btn text="ابدأ الان" to="apply" type="bp"/>
       </div>
       <video
         className={Styles.heroVideo}

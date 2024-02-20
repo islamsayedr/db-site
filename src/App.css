@@ -33,10 +33,12 @@
 #nav .navLink a.active {
     color: var(--white);
 }
+
 #sideBar ul li a.active {
     color: var(--white);
     background-color: var(--brandMain);
 }
+
 #nav .navLink a.active::after {
     content: '';
     display: block;
@@ -46,6 +48,24 @@
     bottom: 16px;
 }
 
-#headerPlace{
+#headerPlace {
     height: 72px;
+}
+
+.bp {
+    background-color: var(--brandMain);
+    font-size: 18px;
+    height: 56px;
+    padding: 0px 32px;
+    border-radius: 32px;
+    color: var(--white);
+    
+}
+.p{
+    background-color: var(--brandMain);
+    color: var(--white);
+    
+}
+.wbg{
+    color: var(--brandMain);
 }

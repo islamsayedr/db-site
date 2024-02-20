@@ -35,7 +35,7 @@ export default function ProjectCard({cover, logo, title, des, tags, dir}) {
         </p>
         <div className={Styles.tagContainer}>
           {tags.map((tag)=>{
-              return <span className={Styles.tag} key={tag.index}>{tag}</span>
+              return <span className={Styles.tag} key={tag}>{tag}</span>
           }
           )}
         </div>

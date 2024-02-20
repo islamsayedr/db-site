@@ -1,4 +1,4 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, NavLink, Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import Btn from "./Btn";
 import { useState } from "react";
@@ -13,16 +13,19 @@ export default function Header() {
         <div className={styles.secCont}>
           <img
             className={styles.burgerMneu}
-            src={sideBarOpen === true? "./icons/x.svg" : "./assets/menu.svg"}
+            src={sideBarOpen === true ? "./icons/x.svg" : "./assets/menu.svg"}
             alt="burger menu"
             onClick={openSideBar}
-            style={{cursor: "pointer"}}
+            style={{ cursor: "pointer" }}
           />
-          <img
-            className={styles.logo}
-            src="./assets/logo.svg"
-            alt="dearmy builder logo"
-          />
+          <Link to="/">
+            <img
+              className={styles.logo}
+              src="./assets/logo.svg"
+              alt="dearmy builder logo"
+            />
+          </Link>
+
           <ul className={styles.nav} id="nav">
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="/">الرئيسية</NavLink>
@@ -39,14 +42,14 @@ export default function Header() {
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="prices">الاسعار</NavLink>
             </li>
-            <li className={`${styles.navLink} navLink`}>
+            {/* <li className={`${styles.navLink} navLink`}>
               <NavLink to="blogs">المدونة</NavLink>
-            </li>
+            </li> */}
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="aboutUs">تعرف علينا</NavLink>
             </li>
           </ul>
-          <Btn text="قدم طلب" />
+          <Btn text="قدم طلب" to="apply" />
         </div>
       </header>
       {sideBarOpen ? <SideBar /> : null}

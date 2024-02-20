@@ -1,6 +1,7 @@
 .footer {
     background-color: var(--brandVeryDark);
     color: var(--white);
+    position: relative;
 }
 
 .container {
@@ -66,7 +67,11 @@
     gap: 8px;
     color: var(--w60);
 }
-
+.bgObject01{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 @media(max-width: 768px) {
     .siteLinks {
         flex-direction: column;
@@ -82,5 +87,8 @@
 
     .brand {
         margin-left: 0;
+    }
+    .bgObject01{
+        display: none;
     }
 }

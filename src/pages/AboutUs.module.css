@@ -1,3 +1,7 @@
+.whydb{
+    position: relative;
+}
+
 .container {
     gap: 32px;
 }
@@ -17,23 +21,14 @@
 
 .cards {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 8px;
     width: 100%;
-    margin: 24px 0;
 }
 
-.arrow {
-    padding: 8px;
-}
-
-
-@media (max-width: 950px) {
-    .cards {
-        flex-direction: column;
-    }
-
-    .arrow {
-        transform: rotate(-90deg);
-    }
+.bgObject01{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
 }

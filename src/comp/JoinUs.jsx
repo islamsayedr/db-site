@@ -12,7 +12,7 @@ export default function JoinUs() {
             التقني ابدا.
           </p>
         </div>
-        <Btn text="قدم طلب الان" />
+        <Btn text="قدم طلب الان" to="apply" type="bp"/>
       </div>
       <img
         className={Styles.bg}

@@ -1,8 +1,31 @@
+import { useEffect, useState } from "react";
 import Styles from "./OurProjects.module.css";
-
 import ProjectCard from "../comp/ProjectCard";
 
-export default function OurProjects() {
+export default function OurProjects({ baseURL }) {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(`${baseURL}/api/proj?populate=*`);
+        if (!res.ok) {
+          throw new Error(`HTTP error! Status: ${res.status}`);
+        }
+        const data = await res.json();
+        setProjects(data.data);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [baseURL]);
+
   return (
     <section>
       <div className={`secContainer ${Styles.container}`}>
@@ -10,44 +33,32 @@ export default function OurProjects() {
           <img src="./assets/dotIcon.svg" alt="dotIcon" />
           <h2>احدث المشاريع</h2>
         </div>
-        <div className={Styles.cards}>
-          <ProjectCard
-            cover="./imgs/project.png"
-            logo="./imgs/logo.png"
-            title="بزنس كود"
-            des="بزنس كود هو محفظة بطاقات الكترونية تضم انواع متعددة من البطاقات مثل
-        بطاقات الاعمال, بطاقات المرور, بطاقات الهوية وغيرها من البطاقات"
-            tags={["اعمال", "بطاقات عمل", "محفظة بطاقات"]}
-            dir="right"
-          />
-          <ProjectCard
-            cover="./imgs/project.png"
-            logo="./imgs/logo.png"
-            title="بزنس كود"
-            des="بزنس كود هو محفظة بطاقات الكترونية تضم انواع متعددة من البطاقات مثل
-        بطاقات الاعمال, بطاقات المرور, بطاقات الهوية وغيرها من البطاقات"
-            tags={["اعمال", "بطاقات عمل", "محفظة بطاقات"]}
-            dir="left"
-          />
-          <ProjectCard
-            cover="./imgs/project.png"
-            logo="./imgs/logo.png"
-            title="بزنس كود"
-            des="بزنس كود هو محفظة بطاقات الكترونية تضم انواع متعددة من البطاقات مثل
-        بطاقات الاعمال, بطاقات المرور, بطاقات الهوية وغيرها من البطاقات"
-            tags={["اعمال", "بطاقات عمل", "محفظة بطاقات"]}
-            dir="right"
-          />
-          <ProjectCard
-            cover="./imgs/project.png"
-            logo="./imgs/logo.png"
-            title="بزنس كود"
-            des="بزنس كود هو محفظة بطاقات الكترونية تضم انواع متعددة من البطاقات مثل
-        بطاقات الاعمال, بطاقات المرور, بطاقات الهوية وغيرها من البطاقات"
-            tags={["اعمال", "بطاقات عمل", "محفظة بطاقات"]}
-            dir="left"
-          />
-        </div>
+        {loading && <p>Loading...</p>}
+        {error && <p>Error: {error}</p>}
+        {!loading && !error && (
+          <div className={Styles.cards}>
+            {projects.map((project) => {
+              const id = project.id;
+              const cover = `${baseURL}${project.attributes.cover.data[0].attributes.url}`;
+              const logo = `${baseURL}${project.attributes.logo.data.attributes.url}`;
+              const name = project.attributes.name;
+              const des = project.attributes.des;
+              const keywords = project.attributes.keywords;
+              const dir = id % 2 === 0 ? "left" : "right";
+              return (
+                <ProjectCard
+                  key={id}
+                  cover={cover}
+                  logo={logo}
+                  title={name}
+                  des={des}
+                  tags={keywords}
+                  dir={dir}
+                />
+              );
+            })}
+          </div>
+        )}
       </div>
     </section>
   );

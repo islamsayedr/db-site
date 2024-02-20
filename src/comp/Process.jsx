@@ -14,6 +14,7 @@ export default function Process() {
             icon="./assets/apply.svg"
             title="قدم طلب شراكة"
             des="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma"
+            order="first"
           />
           <span className={Styles.arrow}>
             <img src="./assets/arrow.svg" alt="arrow" />

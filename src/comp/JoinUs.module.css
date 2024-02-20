@@ -1,7 +1,7 @@
 .sec {
-    height: 400px;
     position: relative;
     display: flex;
+    height: fit-content;
     flex-direction: column;
     background: linear-gradient(103deg, rgba(6, 12, 19, 0.50) 14.44%, rgba(1, 40, 64, 0.50) 88.41%);
 }
@@ -41,7 +41,7 @@
 
 @media (max-width: 768px) {
     .sec {
-        height: 300px;
+        height: fit-content;
     }
 
 }

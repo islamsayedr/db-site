@@ -13,7 +13,9 @@
 
 
 }
-
+.card a{
+    width: 100%;
+}
 .head {
     display: flex;
     flex-direction: column;

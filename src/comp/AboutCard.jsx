@@ -1,7 +1,8 @@
 import { useState } from "react";
-import Styles from "./WhydbCard.module.css";
 
-export default function WhydbCard({ title, des, icon }) {
+import Styles from "./AboutCard.module.css";
+
+export default function AboutCard({ title, des }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseOver = () => {
@@ -11,13 +12,14 @@ export default function WhydbCard({ title, des, icon }) {
   const handleMouseOut = () => {
     setIsHovered(false);
   };
+  var imageSrc = "./assets/bgObject02Hover.svg";
   var cardStyle = {};
 
   if (isHovered) {
-    cardStyle = {
-      boxShadow: "var(--mainShadow)",
-      borderColor: "var(--brandLight)",
-    };
+    imageSrc = "./assets/bgObject02Hover.svg";
+    cardStyle = { boxShadow: "var(--mainShadow)", borderColor: "var(--brandLight)"};
+  } else {
+    imageSrc = "./assets/bgObject02Normal.svg";
   }
 
   return (
@@ -27,13 +29,12 @@ export default function WhydbCard({ title, des, icon }) {
       onMouseOut={handleMouseOut}
       style={cardStyle}
     >
-      <span className={Styles.icon}>
-        <img src={icon} alt="icon" />
-      </span>
+      <span className={Styles.icon}></span>
       <div className={Styles.body}>
         <h3>{title}</h3>
         <p>{des}</p>
       </div>
+      <img className={Styles.bgObject02} src={imageSrc} alt="bg art" />
     </div>
   );
 }

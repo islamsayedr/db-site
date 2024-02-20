@@ -56,6 +56,7 @@ export default function Footer() {
           حقوق النشر محفوظة © 2023 ❣ صانعى الاحلام.
         </div>
       </div>
+      <img className={Styles.bgObject01} src="./assets/bgObject03.svg" alt="bg art" />
     </section>
   );
 }

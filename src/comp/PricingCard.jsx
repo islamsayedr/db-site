@@ -2,22 +2,22 @@ import Styles from "./PricingCard.module.css";
 import Btn from "./Btn";
 
 export default function PricingCard({ title, sub, points, type }) {
-
-    var cardStyle = {}
-  if(type === "main"){
-    cardStyle ={
+  var cardStyle = {};
+  var btnType = "";
+  if (type === "main") {
+    cardStyle = {
       padding: "56px",
       backgroundColor: "var(--brandDark)",
       color: "var(--white)",
       flex: "1.5",
-      boxShadow: "var(--mainShadow)"
-
-    }
-  }else{
-    cardStyle ={
+      boxShadow: "var(--mainShadow)",
+    };
+    btnType = "p";
+  } else {
+    cardStyle = {
       height: "fit-content",
-
-    }
+    };
+    btnType = "wbg";
   }
 
   return (
@@ -29,14 +29,14 @@ export default function PricingCard({ title, sub, points, type }) {
       <div className={Styles.body}>
         {points.map((point) => {
           return (
-            <div className={Styles.point} key={point.index}>
+            <div className={Styles.point} key={point}>
               <img src="./icons/check.svg" alt="check icon" />
               <span>{point}</span>
             </div>
           );
         })}
       </div>
-      <Btn text="ابدأ الان" />
+      <Btn text="ابدأ الان" to="apply" type={btnType} />
     </div>
   );
 }
