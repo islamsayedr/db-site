@@ -1,0 +1,47 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    padding: 20px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 16px;
+    border: 1px solid var(--b16, rgba(32, 32, 38, 0.16));
+    background: var(--white);
+    /* For White Background */
+    box-shadow: 4px 6px 13px 0px rgba(215, 215, 215, 0.25);
+    flex: 1;
+}
+
+.cover {
+    width: 100%;
+}
+
+.imgContaner {
+    display: flex;
+    position: relative;
+    padding-bottom: 66.67%;
+    height: 0 !important;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.imgContaner img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    text-align: right;
+}
+@media(max-width: 768px){
+    .card{
+    min-width: 300px;
+    }
+}

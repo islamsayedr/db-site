@@ -1,0 +1,39 @@
+.container {
+    gap: 32px;
+}
+
+.title {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.container p {
+    width: 100%;
+    max-width: 900px;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    margin: 24px 0;
+}
+
+.arrow {
+    padding: 8px;
+}
+
+
+@media (max-width: 950px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .arrow {
+        transform: rotate(-90deg);
+    }
+}

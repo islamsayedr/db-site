@@ -1,0 +1,85 @@
+.header {
+    width: 100%;
+    border-bottom: 1px solid var(--brandMain, #049DD9);
+    background: rgba(6, 12, 19, 0.90);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    position: fixed;
+    z-index: 9999999999999;
+}
+
+.header .secCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width: max-content;
+    width: 100%;
+    max-width: 1440px;
+    margin: 24px;
+    margin: auto;
+
+}
+
+.header .secCont .burgerMneu {
+    display: none;
+}
+
+.header .secCont .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.header .secCont .nav .navLink {
+    list-style: none;
+    white-space: nowrap;
+}
+
+.navLink a {
+    color: var(--w60);
+}
+
+.sideBar {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 72px;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99999;
+    background: rgba(6, 12, 19, 0.90);
+    backdrop-filter: blur(4px);
+    padding-top: 24px;
+}
+
+.sideBar ul.sideBarLinks li.navLink a{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    padding-right: 24px;
+    width: 100%;
+}
+
+@media screen and (max-width: 950px) {
+    .header {
+        padding: 0 20px;
+    }
+
+    .header .secCont .nav {
+        display: none;
+    }
+
+    .header .secCont .burgerMneu {
+        display: flex;
+    }
+
+    .sideBar {
+        display: flex;
+    }
+}

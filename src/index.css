@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+:root {
+    --white: #ffffff;
+    --w87: rgba(255, 255, 255, 0.87);
+    --w60: rgba(255, 255, 255, 0.60);
+    --w32: rgba(255, 255, 255, 0.32);
+
+    --black: #2B2C34;
+    --b87: rgba(32, 32, 38, 0.87);
+    --b60: rgba(32, 32, 38, 0.60);
+    --b32: rgba(32, 32, 38, 0.32);
+    --b24: rgba(32, 32, 38, 0.24);
+    --b16: rgba(32, 32, 38, 0.16);
+
+    --bg: #EAF0F1;
+    --gray: #3E474E;
+
+    --brandVeryLight: #C0ECF5;
+    --brandLight: #5CC8F2;
+    --brandMain: #049DD9;
+    --brandDark: #012840;
+    --brandVeryDark: #060C13;
+
+    --green: #85BE41;
+
+    --mainShadow: -16px 16px 50px 0px rgba(32, 32, 38, 0.24);
+}
+
+body {
+    direction: rtl;
+    font-family: 'Tajawal', sans-serif;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    padding: 88px 60px;
+}
+
+.secContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width: max-content;
+    width: 100%;
+    max-width: 1440px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 64px 20px;
+        ;
+    }
+
+}
