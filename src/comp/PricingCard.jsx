@@ -36,7 +36,7 @@ export default function PricingCard({ title, sub, points, type }) {
           );
         })}
       </div>
-      <Btn text="ابدأ الان" to="apply" type={btnType} />
+      <Btn text="ابدأ الان" to="/apply" type={btnType} />
     </div>
   );
 }

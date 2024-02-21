@@ -1,5 +1,4 @@
-
-.btn{
+.btn {
     text-wrap: nowrap;
     color: var(--brandVeryLight, #C0ECF5);
     font-family: Tajawal;
@@ -16,3 +15,7 @@
     border: 1px solid var(--brandMain, #049DD9);
 }
 
+.btn:hover {
+    background-color: var(--brandVeryLight);
+    color: var(--brandMain);
+}

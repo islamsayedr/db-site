@@ -8,6 +8,12 @@
     background: var(--white);
 
 }
+.card:hover{
+    border-color: var(--brandMain);
+    box-shadow: var(--mainShadow);
+    padding: 16px;
+    margin: 8px;
+}
 .card.left{
     flex-direction: row-reverse;
 }

@@ -17,7 +17,7 @@ export default function Home({baseURL}) {
       <JoinUs />
       <Pricing />
       <Review baseURL={baseURL}/>
-      {/* <LatestArticles /> */}
+      <LatestArticles baseURL = {baseURL} />
     </>
   );
 }

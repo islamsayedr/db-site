@@ -14,6 +14,7 @@ import "./App.css";
 import Header from "./comp/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./comp/Footer";
+import ArticleDetails from "./pages/ArticleDetails";
 
 function App() {
   const baseURL = "http://localhost:1337";
@@ -28,7 +29,8 @@ function App() {
           <Route path="prices" element={<OurPrices />} />
           <Route path="process" element={<OurProcess />} />
           <Route path="projects" element={<OurProjects baseURL={baseURL} />} />
-          {/* <Route path="blogs" element={<Blog />} /> */}
+          <Route path="blogs" element={<Blog  baseURL={baseURL} />} />
+          <Route path="blogs/:id" element={<ArticleDetails  baseURL={baseURL} />} />
           <Route path="aboutUs" element={<AboutUs />} />
           <Route path="applyNow" element={<ApplyNow />} />
           <Route path="apply" element={<Apply />} />

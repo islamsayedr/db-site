@@ -11,6 +11,7 @@
     background: var(--white);
     /* For White Background */
     box-shadow: 4px 6px 13px 0px rgba(215, 215, 215, 0.25);
+    flex: 1;
 }
 
 .cover {
@@ -31,6 +32,7 @@
     left: 0;
     top: 0;
     object-fit: cover;
+    width: 100%;
 }
 .body{
     display: flex;

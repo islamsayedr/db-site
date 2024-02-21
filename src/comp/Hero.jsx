@@ -16,7 +16,7 @@ export default function Hero() {
       </div>
       <video
         className={Styles.heroVideo}
-        src="./assets/heroVideo.mp4"
+        src="./assets/heroVideo.webm"
         loop
         muted
         autoPlay

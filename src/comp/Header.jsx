@@ -42,9 +42,9 @@ export default function Header() {
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="prices">الاسعار</NavLink>
             </li>
-            {/* <li className={`${styles.navLink} navLink`}>
+            <li className={`${styles.navLink} navLink`}>
               <NavLink to="blogs">المدونة</NavLink>
-            </li> */}
+            </li>
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="aboutUs">تعرف علينا</NavLink>
             </li>

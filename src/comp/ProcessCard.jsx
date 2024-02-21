@@ -38,7 +38,7 @@ export default function ProcessCard({ title, des, icon, order }) {
         <h3>{title}</h3>
         <p style={pStyle}>{des}</p>
         <div className={Styles.btn} style={btnStyle}>
-          <Btn text="ابدأ الان" to="/apply" type="p" />
+          <Btn text="ابدأ الان" to="/apply" type="wbg" />
         </div>
       </div>
     </div>

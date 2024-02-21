@@ -69,3 +69,10 @@
 .wbg{
     color: var(--brandMain);
 }
+.wbg:hover{
+    background-color: var(--brandVeryLight);
+}
+
+.bp:hover, .p:hover{
+    background-color: var(--brandDark);
+}
