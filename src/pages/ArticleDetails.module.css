@@ -35,6 +35,7 @@
     color: var(--brandMain);
     height: 32px;
     font-weight: 800px;
+    cursor: pointer;
 }
 
 @media(max-width: 768px){
