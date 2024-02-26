@@ -96,7 +96,7 @@ export default function ApplyNow() {
               onChange={handleChange}
             />
           </div>
-          <button type="submit"> ارسال الطلب</button>
+          <button type="submit" className="submit"> ارسال الطلب</button>
         </form>
       </div>
     </section>

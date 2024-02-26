@@ -30,9 +30,9 @@ export default function Header() {
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="/">الرئيسية</NavLink>
             </li>
-            <li className={`${styles.navLink} navLink`}>
+            {/* <li className={`${styles.navLink} navLink`}>
               <NavLink to="Services">خدماتنا</NavLink>
-            </li>
+            </li> */}
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="projects">مشاريعنا</NavLink>
             </li>
@@ -65,9 +65,9 @@ const SideBar = () => {
         <li className={`${styles.navLink} navLink`}>
           <NavLink to="/">الرئيسية</NavLink>
         </li>
-        <li className={`${styles.navLink} navLink`}>
+        {/* <li className={`${styles.navLink} navLink`}>
           <NavLink to="Services">خدماتنا</NavLink>
-        </li>
+        </li> */}
         <li className={`${styles.navLink} navLink`}>
           <NavLink to="projects">مشاريعنا</NavLink>
         </li>

@@ -24,6 +24,15 @@
     flex-direction: column;
     gap: 8px;
     width: 100%;
+    margin-bottom: 88px;
+
+}
+.team{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* gap: 12px; */
+    flex-wrap: wrap;
 }
 
 .bgObject01{
