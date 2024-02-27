@@ -27,7 +27,7 @@ export default function ApplyNow() {
 
     try {
       const response = await axios.post(
-        "http://localhost:1337/api/req",
+        "https://dreamy-backend.azurewebsites.net/api/req",
         formData
       );
 
