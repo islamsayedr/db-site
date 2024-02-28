@@ -17,7 +17,7 @@ import Footer from "./comp/Footer";
 import ArticleDetails from "./pages/ArticleDetails";
 
 function App() {
-  const baseURL = "http://localhost:1337";
+  const baseURL = "https://dreamy-backend.azurewebsites.net/";
   return (
     <>
       <BrowserRouter>

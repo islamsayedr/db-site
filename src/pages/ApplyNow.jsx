@@ -27,7 +27,7 @@ export default function ApplyNow() {
 
     try {
       const response = await axios.post(
-        "http://localhost:1337/api/req",
+        "https://dreamy-backend.azurewebsites.net/api/req",
         formData
       );
 
@@ -96,7 +96,10 @@ export default function ApplyNow() {
               onChange={handleChange}
             />
           </div>
-          <button type="submit" className="submit"> ارسال الطلب</button>
+          <button type="submit" className="submit">
+            {" "}
+            ارسال الطلب
+          </button>
         </form>
       </div>
     </section>
