@@ -34,7 +34,7 @@ export default function Header() {
               <NavLink to="Services">خدماتنا</NavLink>
             </li> */}
             <li className={`${styles.navLink} navLink`}>
-              <NavLink to="projects">مشاريعنا</NavLink>
+              <NavLink to="projects">شركاتنا</NavLink>
             </li>
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="process">كيف يتم الامر</NavLink>
@@ -44,6 +44,9 @@ export default function Header() {
             </li>
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="blogs">المدونة</NavLink>
+            </li>
+            <li className={`${styles.navLink} navLink`}>
+              <NavLink to="aboutUs">الأسئلة المتكررة</NavLink>
             </li>
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="aboutUs">تعرف علينا</NavLink>
@@ -69,7 +72,7 @@ const SideBar = () => {
           <NavLink to="Services">خدماتنا</NavLink>
         </li> */}
         <li className={`${styles.navLink} navLink`}>
-          <NavLink to="projects">مشاريعنا</NavLink>
+          <NavLink to="projects">شركاتنا</NavLink>
         </li>
         <li className={`${styles.navLink} navLink`}>
           <NavLink to="process">كيف يتم الامر</NavLink>
@@ -80,6 +83,9 @@ const SideBar = () => {
         <li className={`${styles.navLink} navLink`}>
           <NavLink to="blogs">المدونة</NavLink>
         </li>
+        <li className={`${styles.navLink} navLink`}>
+              <NavLink to="aboutUs">الأسئلة المتكررة</NavLink>
+            </li>
         <li className={`${styles.navLink} navLink`}>
           <NavLink to="aboutUs">تعرف علينا</NavLink>
         </li>
