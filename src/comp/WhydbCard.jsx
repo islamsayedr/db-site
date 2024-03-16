@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Styles from "./WhydbCard.module.css";
 
-export default function WhydbCard({ title, des, icon }) {
+export default function WhydbCard({ title, des, icon, iconHoverd }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseOver = () => {
@@ -19,7 +19,7 @@ export default function WhydbCard({ title, des, icon }) {
       borderColor: "var(--brandLight)",
     };
   }
-
+  const iconsrc = isHovered ?iconHoverd:icon;
   return (
     <div
       className={Styles.card}
@@ -28,7 +28,7 @@ export default function WhydbCard({ title, des, icon }) {
       style={cardStyle}
     >
       <span className={Styles.icon}>
-        <img src={icon} alt="icon" />
+        <img src={iconsrc} alt="icon" />
       </span>
       <div className={Styles.body}>
         <h3>{title}</h3>

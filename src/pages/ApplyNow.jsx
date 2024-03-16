@@ -9,6 +9,8 @@ export default function ApplyNow() {
       email: "",
       phone: "",
       project: "",
+      type: "",
+      state: "",
     },
   });
 
@@ -28,6 +30,7 @@ export default function ApplyNow() {
     try {
       const response = await axios.post(
         "https://dreamy-backend.azurewebsites.net/api/req",
+        // "http://localhost:1337/api/req",
         formData
       );
 
@@ -39,6 +42,8 @@ export default function ApplyNow() {
           email: "",
           phone: "",
           project: "",
+          type: "",
+          state: "",
         },
       });
     } catch (error) {
@@ -50,9 +55,9 @@ export default function ApplyNow() {
       <div className={`secContainer ${Styles.container}`}>
         <div className={Styles.title}>
           <img src="./assets/dotIcon.svg" alt="dotIcon" />
-          <h2>تقديم طلب شراكة</h2>
+          <h2>تقديم طلب شراكة أو تطوير</h2>
         </div>
-        <p>برجاء ملئ البيانات التالية والضغط على ارسال الطلب</p>
+        <p>الرجاء ملئ البيانات التالية والضغط على ارسال الطلب</p>
 
         <form onSubmit={handleSubmit}>
           <div className={Styles.input}>
@@ -87,8 +92,62 @@ export default function ApplyNow() {
               />
             </div>
           </div>
+
           <div className={Styles.input}>
-            <label htmlFor="project">وصف المشروع</label>
+            <label htmlFor="type">نوع الطلب</label>
+            <div className={Styles.radioBtn}>
+              <label>
+                <input
+                  type="radio"
+                  name="type"
+                  value="شراكة تقنية مقابل ملكية"
+                  checked={formData.data.type === "شراكة تقنية مقابل ملكية"}
+                  onChange={handleChange}
+                />
+                شراكة تقنية مقابل ملكية
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="type"
+                  value="شراكة تقنية كخدمة"
+                  checked={formData.data.type === "شراكة تقنية كخدمة"}
+                  onChange={handleChange}
+                />
+                شراكة تقنية كخدمة
+              </label>
+            </div>
+          </div>
+          <div className={Styles.input}>
+            <label htmlFor="state">في أي مرحلة أنت الآن؟</label>
+            <select
+              name="state"
+              value={formData.data.state}
+              onChange={handleChange}
+            >
+              <option className={Styles.option} value="">
+                اختر المرحلة...
+              </option>
+              <option className={Styles.option} value="فكرة جديدة">
+                فكرة جديدة
+              </option>
+              <option className={Styles.option} value="تحت التطوير">
+                تحت التطوير
+              </option>
+              <option className={Styles.option} value="تم تطوير المنتج الأولي">
+                تم تطوير المنتج الأولي
+              </option>
+              <option
+                className={Styles.option}
+                value="منتج قائم وتم التحقق من صحته"
+              >
+                منتج قائم وتم التحقق من صحته
+              </option>
+            </select>
+          </div>
+
+          <div className={Styles.input}>
+            <label htmlFor="project">وصف</label>
             <textarea
               name="project"
               placeholder="اكتب تفاصيل المشروع هنا..."

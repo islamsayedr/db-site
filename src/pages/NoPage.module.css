@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 88px; */
+    gap: 8px;
+}
+.container span{
+    font-size: 20px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+.container img{
+    width: 100%;
+    max-width: 500px;
+}

@@ -1,0 +1,10 @@
+.whats {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+}
+
+.whats img {
+    height: 64px;
+    width: 64px;
+}

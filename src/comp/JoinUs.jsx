@@ -5,19 +5,16 @@ export default function JoinUs() {
     <section className={Styles.sec}>
       <div className={`secContainer ${Styles.container}`}>
         <div className={Styles.content}>
-          <h2>انضم لقائمة شركائنا</h2>
+          <h2>احصل على العرض المناسب لك</h2>
           <p>
-            نحل مشكلة رياديين الأعمال الذين يفتقرون للجانب التقني ويحتاجون شريك
-            يثقون فيه ليدير لهم الجانب التقني من الشركه بحيث ما يشيلون هم الجانب
-            التقني ابدا.
+            لست بحاجة أن تكون ملماً بالتقنية لنجاح منتجك التقني أنت فقط بحاجة
+            لشريك تقني تثق به! تواصل معنا الآن لدراسة مشروعك وتقديم العرض
+            المناسب لك
           </p>
         </div>
-        <Btn text="قدم طلب الان" to="apply" type="bp"/>
+        <Btn text="قدم طلب الان" to="apply" type="bp" />
       </div>
-      <img
-        className={Styles.bg}
-        src="./imgs/secbg.png"
-      ></img>
+      <img className={Styles.bg} src="./imgs/secbg.png"></img>
     </section>
   );
 }

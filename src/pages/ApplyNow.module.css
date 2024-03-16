@@ -1,6 +1,10 @@
 .container {
     gap: 32px;
 }
+.whydb{
+    background-color: var(--bg);
+
+}
 
 .title {
     display: flex;
@@ -50,7 +54,8 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
     display: flex;
     text-align: right;
     direction: rtl;
@@ -61,6 +66,39 @@ textarea {
     border: 1px solid var(--b24) !important;
     width: 100%;
 
+}
+
+
+.radioBtn {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    border-radius: 16px;
+    background-color: var(--b16);
+    padding: 16px;
+}
+
+.radioBtn label {
+    display: flex;
+    flex: 1;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: var(--white);
+
+
+}
+
+.radioBtn label input {
+    height: 24px;
+    width: 24px;
+}
+
+.select select option {
+    padding: 8px;
+}
+.option{
+    height: 40px;
 }
 
 button {

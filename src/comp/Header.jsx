@@ -34,20 +34,20 @@ export default function Header() {
               <NavLink to="Services">خدماتنا</NavLink>
             </li> */}
             <li className={`${styles.navLink} navLink`}>
-              <NavLink to="projects">شركاتنا</NavLink>
+              <NavLink to="projects">اعمالنا</NavLink>
             </li>
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="process">كيف يتم الامر</NavLink>
             </li>
-            <li className={`${styles.navLink} navLink`}>
+            {/* <li className={`${styles.navLink} navLink`}>
               <NavLink to="prices">الاسعار</NavLink>
-            </li>
-            <li className={`${styles.navLink} navLink`}>
+            </li> */}
+            {/* <li className={`${styles.navLink} navLink`}>
               <NavLink to="blogs">المدونة</NavLink>
-            </li>
-            <li className={`${styles.navLink} navLink`}>
+            </li> */}
+            {/* <li className={`${styles.navLink} navLink`}>
               <NavLink to="aboutUs">الأسئلة المتكررة</NavLink>
-            </li>
+            </li> */}
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="aboutUs">تعرف علينا</NavLink>
             </li>
@@ -72,12 +72,12 @@ const SideBar = () => {
           <NavLink to="Services">خدماتنا</NavLink>
         </li> */}
         <li className={`${styles.navLink} navLink`}>
-          <NavLink to="projects">شركاتنا</NavLink>
+          <NavLink to="projects">اعمالنا</NavLink>
         </li>
         <li className={`${styles.navLink} navLink`}>
           <NavLink to="process">كيف يتم الامر</NavLink>
         </li>
-        <li className={`${styles.navLink} navLink`}>
+        {/* <li className={`${styles.navLink} navLink`}>
           <NavLink to="prices">الاسعار</NavLink>
         </li>
         <li className={`${styles.navLink} navLink`}>
@@ -85,7 +85,7 @@ const SideBar = () => {
         </li>
         <li className={`${styles.navLink} navLink`}>
               <NavLink to="aboutUs">الأسئلة المتكررة</NavLink>
-            </li>
+            </li> */}
         <li className={`${styles.navLink} navLink`}>
           <NavLink to="aboutUs">تعرف علينا</NavLink>
         </li>

@@ -12,8 +12,8 @@ export default function Process() {
         <div className={Styles.cards}>
           <ProcessCard
             icon="./assets/apply.svg"
-            title="قدم طلب شراكة"
-            des="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma"
+            title="قدم طلبك"
+            des="قم بتعبئة نموذج الطلب في الأسفل بجميع التفاصيل التي تريد مشاركتها معنا"
             order="first"
           />
           <span className={Styles.arrow}>
@@ -22,23 +22,23 @@ export default function Process() {
           <ProcessCard
             icon="./assets/review.svg"
             title="مراجعة الطلب"
-            des="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma"
+            des="سنقوم بمراجعة طلبك وتقييمه ثم سيتم الرد عليك خلال ٤٨ ساعة "
           />
           <span className={Styles.arrow}>
             <img src="./assets/arrow.svg" alt="arrow" />
           </span>
           <ProcessCard
             icon="./assets/meeting.svg"
-            title=" مقابلة شخصية "
-            des="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma"
+            title="لقاء لمناقشة المشروع"
+            des="سنتواصل معك لترتيب لقاء يتم التعرف فيه أكثر على مشروعك والإجابة على أسئلتك "
           />
           <span className={Styles.arrow}>
             <img src="./assets/arrow.svg" alt="arrow" />
           </span>
           <ProcessCard
             icon="./assets/contarct.svg"
-            title="توقيع العقد"
-            des="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma"
+            title="إحصل على عرضك"
+            des="في حال الإتفاق المبدئي بعد اللقاء سيتم إرسال العرض المناسب لكم "
           />
         </div>
       </div>
