@@ -45,7 +45,6 @@ export default function LatestProjects({ baseURL }) {
               const des = project.attributes.des;
               const keywords = project.attributes.keywords;
               const URL = project.attributes.link;
-              console.log(URL)
               const dir = id % 2 === 0 ? "left" : "right";
               return (
                 <ProjectCard
