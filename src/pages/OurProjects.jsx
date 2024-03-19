@@ -44,6 +44,7 @@ export default function OurProjects({ baseURL }) {
               const name = project.attributes.name;
               const des = project.attributes.des;
               const keywords = project.attributes.keywords;
+              const URL = project.attributes.link;
               const dir = id % 2 === 0 ? "left" : "right";
               return (
                 <ProjectCard
@@ -54,6 +55,7 @@ export default function OurProjects({ baseURL }) {
                   des={des}
                   tags={keywords}
                   dir={dir}
+                  URL={URL}
                 />
               );
             })}
