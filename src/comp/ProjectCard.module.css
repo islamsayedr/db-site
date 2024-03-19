@@ -47,7 +47,9 @@
     text-align: right;
     gap: 12px;
 }
-
+.info a{
+    color: var(--b87);
+}
 .logo {
     height: 40px;
     width: fit-content;

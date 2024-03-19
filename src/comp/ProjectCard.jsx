@@ -1,22 +1,30 @@
 import Styles from "./ProjectCard.module.css";
 
-export default function ProjectCard({cover, logo, title, des, tags, dir}) {
-  var cardStyle = {}
-  var infoStyle = {}
-  if(dir === "left"){
-      cardStyle = {
-      direction: "ltr"
-    }
+export default function ProjectCard({
+  cover,
+  logo,
+  title,
+  des,
+  tags,
+  dir,
+  URL,
+}) {
+  var cardStyle = {};
+  var infoStyle = {};
+  if (dir === "left") {
+    cardStyle = {
+      direction: "ltr",
+    };
     infoStyle = {
-      textAlign: "left"
-    }
+      textAlign: "left",
+    };
   }
 
   return (
     <div className={Styles.card} style={cardStyle}>
       <div className={Styles.cover}>
         <div className={Styles.imgContaner}>
-        <img src={cover} alt="prject cover" />
+          <img src={cover} alt="prject cover" />
         </div>
         <div className={Styles.indicator}>
           <span className={Styles.dot}></span>
@@ -29,15 +37,18 @@ export default function ProjectCard({cover, logo, title, des, tags, dir}) {
       </div>
       <div className={Styles.info} style={infoStyle}>
         <img src={logo} alt="business logo" className={Styles.logo} />
-        <h3>{title}</h3>
-        <p>
-          {des}
-        </p>
+        <a href={URL} target="_blank">
+          <h3>{title} 🌐</h3>
+        </a>
+        <p>{des}</p>
         <div className={Styles.tagContainer}>
-          {tags.map((tag)=>{
-              return <span className={Styles.tag} key={tag}>{tag}</span>
-          }
-          )}
+          {tags.map((tag) => {
+            return (
+              <span className={Styles.tag} key={tag}>
+                {tag}
+              </span>
+            );
+          })}
         </div>
       </div>
     </div>

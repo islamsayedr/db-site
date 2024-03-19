@@ -33,7 +33,7 @@ export default function LatestProjects({ baseURL }) {
           <img src="./assets/dotIcon.svg" alt="dotIcon" />
           <h2>احدث المشاريع</h2>
         </div>
-        {loading && <p>Loading...</p>}
+        {loading && <><img className={Styles.webSkelton} src="./imgs/projectSkeltonWeb.svg"/><img className={Styles.mobSkelton} src="./imgs/projectSkeltonMob.svg"/></>}
         {error && <p>Error: {error}</p>}
         {!loading && !error && (
           <div className={Styles.cards}>
@@ -44,6 +44,8 @@ export default function LatestProjects({ baseURL }) {
               const name = project.attributes.name;
               const des = project.attributes.des;
               const keywords = project.attributes.keywords;
+              const URL = project.attributes.link;
+              console.log(URL)
               const dir = id % 2 === 0 ? "left" : "right";
               return (
                 <ProjectCard
@@ -54,6 +56,7 @@ export default function LatestProjects({ baseURL }) {
                   des={des}
                   tags={keywords}
                   dir={dir}
+                  URL={URL}
                 />
               );
             })}

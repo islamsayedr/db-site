@@ -36,9 +36,9 @@ export default function Header() {
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="projects">اعمالنا</NavLink>
             </li>
-            <li className={`${styles.navLink} navLink`}>
+            {/* <li className={`${styles.navLink} navLink`}>
               <NavLink to="process">كيف يتم الامر</NavLink>
-            </li>
+            </li> */}
             {/* <li className={`${styles.navLink} navLink`}>
               <NavLink to="prices">الاسعار</NavLink>
             </li> */}
@@ -52,31 +52,31 @@ export default function Header() {
               <NavLink to="aboutUs">تعرف علينا</NavLink>
             </li>
           </ul>
-          <Btn text="قدم طلب" to="apply" />
+          {/* <Btn text="قدم طلب" to="apply" /> */}
         </div>
       </header>
-      {sideBarOpen ? <SideBar /> : null}
+      {sideBarOpen ? <SideBar openSideBar={openSideBar} /> : null}
       <Outlet />
     </>
   );
 }
 
-const SideBar = () => {
+const SideBar = (openSideBar) => {
   return (
     <div className={styles.sideBar} id="sideBar">
       <ul className={styles.sideBarLinks}>
-        <li className={`${styles.navLink} navLink`}>
+        <li className={`${styles.navLink} navLink`} onClick={openSideBar}>
           <NavLink to="/">الرئيسية</NavLink>
         </li>
         {/* <li className={`${styles.navLink} navLink`}>
           <NavLink to="Services">خدماتنا</NavLink>
         </li> */}
-        <li className={`${styles.navLink} navLink`}>
+        <li className={`${styles.navLink} navLink`} onClick={openSideBar}>
           <NavLink to="projects">اعمالنا</NavLink>
         </li>
-        <li className={`${styles.navLink} navLink`}>
+        {/* <li className={`${styles.navLink} navLink`}>
           <NavLink to="process">كيف يتم الامر</NavLink>
-        </li>
+        </li> */}
         {/* <li className={`${styles.navLink} navLink`}>
           <NavLink to="prices">الاسعار</NavLink>
         </li>
@@ -86,7 +86,7 @@ const SideBar = () => {
         <li className={`${styles.navLink} navLink`}>
               <NavLink to="aboutUs">الأسئلة المتكررة</NavLink>
             </li> */}
-        <li className={`${styles.navLink} navLink`}>
+        <li className={`${styles.navLink} navLink`} onClick={openSideBar}>
           <NavLink to="aboutUs">تعرف علينا</NavLink>
         </li>
       </ul>

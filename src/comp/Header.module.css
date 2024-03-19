@@ -16,7 +16,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: right;
+    gap: 24px;
     margin: auto;
     width: max-content;
     width: 100%;
@@ -34,6 +35,8 @@
     display: flex;
     flex-direction: row;
     gap: 24px;
+    flex: 1;
+    justify-content: left;
 }
 
 .header .secCont .nav .navLink {
@@ -43,6 +46,9 @@
 
 .navLink a {
     color: var(--w60);
+}
+.logo{
+    margin-bottom: -7px;
 }
 
 .sideBar {

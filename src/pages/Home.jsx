@@ -14,14 +14,14 @@ export default function Home({baseURL}) {
     <>
       <Hero />
       <Whydb />
-      <Process />
+      {/* <Process /> */}
       <LatestProjects baseURL = {baseURL}/>
-      <JoinUs />
+      {/* <JoinUs /> */}
       {/* <Pricing /> */}
-      <Review baseURL={baseURL}/>
+      {/* <Review baseURL={baseURL}/> */}
       {/* <LatestArticles baseURL = {baseURL} /> */}
       {/* <FAQ baseURL = {baseURL}/> */}
-      < ApplyNow />
+      {/* < ApplyNow /> */}
     </>
   );
 }

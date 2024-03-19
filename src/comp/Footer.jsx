@@ -24,9 +24,9 @@ export default function Footer() {
                 <Link to="projects" className={Styles.link}>
                   اعمالنا
                 </Link>
-                <Link to="process" className={Styles.link}>
+                {/* <Link to="process" className={Styles.link}>
                   كيف يتم الامر
-                </Link>
+                </Link> */}
               </div>
             </div>
             {/* <div className={Styles.group}>

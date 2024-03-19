@@ -24,7 +24,7 @@
     flex-direction: column;
     gap: 8px;
     width: 100%;
-    margin-bottom: 88px;
+    margin-bottom: 40px;
 
 }
 .team{
@@ -40,4 +40,36 @@
     bottom: 0;
     left: 0;
     z-index: -2;
+}
+
+.samir{
+    display: flex;
+    align-items: start;
+    text-align: right;
+}
+.samir img{
+    width: 30%;
+    object-fit:contain
+}
+.about{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+}
+.about p{
+    margin: 16px 0px;
+}
+
+@media(max-width: 768px){
+    .samir{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 32px;
+    }
+    .samir img{
+        width: 70%;
+    }
+    
 }

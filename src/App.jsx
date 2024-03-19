@@ -28,13 +28,13 @@ function App() {
           <Route index element={<Home baseURL={baseURL} />} />
           {/* <Route path="Services" element={<Services />} /> */}
           {/* <Route path="prices" element={<OurPrices />} /> */}
-          <Route path="process" element={<OurProcess />} />
+          {/* <Route path="process" element={<OurProcess />} /> */}
           <Route path="projects" element={<OurProjects baseURL={baseURL} />} />
           {/* <Route path="blogs" element={<Blog  baseURL={baseURL} />} /> */}
           {/* <Route path="blogs/:id" element={<ArticleDetails  baseURL={baseURL} />} /> */}
           <Route path="aboutUs" element={<AboutUs baseURL={baseURL}/>} />
-          <Route path="applyNow" element={<ApplyNow />} />
-          <Route path="apply" element={<Apply />} />
+          {/* <Route path="applyNow" element={<ApplyNow />} /> */}
+          {/* <Route path="apply" element={<Apply />} /> */}
           <Route path="*" element={<NoPage />} />
         </Routes>
         <Footer />

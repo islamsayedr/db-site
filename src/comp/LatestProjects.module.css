@@ -28,3 +28,20 @@
     padding: 8px;
 }
 
+.mobSkelton {
+    display: none;
+}
+
+.webSkelton {
+    display: flex;
+}
+
+@media(max-width: 768px) {
+    .mobSkelton {
+        display: flex;
+    }
+
+    .webSkelton {
+        display: none;
+    }
+}
