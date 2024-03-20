@@ -20,7 +20,7 @@ export default function Home({baseURL}) {
       <Pricing />
       {/* <Review baseURL={baseURL}/> */}
       {/* <LatestArticles baseURL = {baseURL} /> */}
-      {/* <FAQ baseURL = {baseURL}/> */}
+      <FAQ baseURL = {baseURL}/>
       {/* < ApplyNow /> */}
     </>
   );

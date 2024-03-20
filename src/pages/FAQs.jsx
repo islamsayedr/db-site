@@ -1,7 +1,7 @@
-import Btn from "./Btn";
-import Styles from "./FAQ.module.css";
+import Styles from "../comp/FAQ.module.css";
 import { useEffect, useState } from "react";
-export default function FAQ({ baseURL }) {
+
+export default function FAQs({ baseURL }) {
   const [qus, setQus] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -32,26 +32,20 @@ export default function FAQ({ baseURL }) {
           <img src="./assets/dotIcon.svg" alt="dotIcon" />
           <h2>الاسئلة المتكررة</h2>
         </div>
+        <p>اليك اجابات على اكثر الاسئلة التى نتلقاها, فى حالة كان لديك اى تساؤل اخر لا تتردد فى التةاصل معنا عبر الواتس اب.</p>
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error}</p>}
         {!loading && !error && (
           <div className={Styles.cards}>
-            {qus.slice(-5).map((article) => {
+            {qus.map((article) => {
               const id = article.id;
               const qs = article.attributes.qs;
               const answer = article.attributes.answer;
-              
-              return (
-                <Qs
-                    key={id}
-                  qs={qs}
-                  answer={answer}
-                />
-              );
+
+              return <Qs key={id} qs={qs} answer={answer} />;
             })}
           </div>
         )}
-        <Btn text="عرض المزيد" to="faqs" type="wbg" />
       </div>
     </section>
   );

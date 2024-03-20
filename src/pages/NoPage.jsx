@@ -5,7 +5,7 @@ export default function NoPage() {
   return (
     <section className={Styles.container}>
       <img src="./imgs/404.svg" alt="" />
-      <span>عذرا, لا يوجد صفحة بهذا الاسم</span>
+      <span>عذرا, هذة الصفحة غير متوفرة حاليا.</span>
       <Btn text="العودة للصفحة الرئيسية" to="/" type="wbg" />
 
     </section>

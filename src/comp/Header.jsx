@@ -51,6 +51,9 @@ export default function Header() {
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="aboutUs">تعرف علينا</NavLink>
             </li>
+            <li className={`${styles.navLink} navLink`}>
+              <NavLink to="faqs">الاسئلة المتكررة</NavLink>
+            </li>
           </ul>
           {/* <Btn text="قدم طلب" to="apply" /> */}
         </div>
@@ -89,6 +92,9 @@ const SideBar = (openSideBar) => {
             </li> */}
         <li className={`${styles.navLink} navLink`} onClick={openSideBar}>
           <NavLink to="aboutUs">تعرف علينا</NavLink>
+        </li>
+        <li className={`${styles.navLink} navLink`} onClick={openSideBar}>
+          <NavLink to="faqs">الاسئلة المتكررة</NavLink>
         </li>
       </ul>
     </div>

@@ -15,6 +15,7 @@ import Header from "./comp/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./comp/Footer";
 import WhatsApp from "./comp/WhatsApp";
+import FAQs from "./pages/FAQs";
 // import ArticleDetails from "./pages/ArticleDetails";
 
 function App() {
@@ -32,9 +33,10 @@ function App() {
           <Route path="projects" element={<OurProjects baseURL={baseURL} />} />
           {/* <Route path="blogs" element={<Blog  baseURL={baseURL} />} /> */}
           {/* <Route path="blogs/:id" element={<ArticleDetails  baseURL={baseURL} />} /> */}
-          <Route path="aboutUs" element={<AboutUs baseURL={baseURL}/>} />
+          <Route path="aboutUs" element={<AboutUs baseURL={baseURL} />} />
           {/* <Route path="applyNow" element={<ApplyNow />} /> */}
           {/* <Route path="apply" element={<Apply />} /> */}
+          <Route path="faqs" element={<FAQs baseURL={baseURL} />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
         <Footer />
