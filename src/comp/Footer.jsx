@@ -39,9 +39,9 @@ export default function Footer() {
             <div className={Styles.group}>
               <h5>تواصل معنا</h5>
               <div className={Styles.links}>
-                <a href="tel:+966565733017" className={Styles.link}>
+                {/* <a href="tel:+966565733017" className={Styles.link}>
                   +966565733017
-                </a>
+                </a> */}
                 <a
                   href="mailto:info@dreamybuilders.com"
                   className={Styles.link}
@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
         </div>
         <div className={Styles.tail}>
-          حقوق النشر محفوظة © 2023 ❣ صانعى الاحلام.
+          حقوق النشر محفوظة © 2024 ❣ صانعى الاحلام.
         </div>
       </div>
       <img

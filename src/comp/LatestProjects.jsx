@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Styles from "./LatestProjects.module.css";
 import ProjectCard from "./ProjectCard";
+import Btn from "./Btn";
 
 export default function LatestProjects({ baseURL }) {
   const [projects, setProjects] = useState([]);
@@ -61,6 +62,7 @@ export default function LatestProjects({ baseURL }) {
             })}
           </div>
         )}
+        <Btn text="عرض المزيد" to="projects" type="wbg" />
       </div>
     </section>
   );
