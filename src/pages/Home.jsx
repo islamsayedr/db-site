@@ -17,7 +17,7 @@ export default function Home({baseURL}) {
       {/* <Process /> */}
       <LatestProjects baseURL = {baseURL}/>
       {/* <JoinUs /> */}
-      {/* <Pricing /> */}
+      <Pricing />
       {/* <Review baseURL={baseURL}/> */}
       {/* <LatestArticles baseURL = {baseURL} /> */}
       {/* <FAQ baseURL = {baseURL}/> */}

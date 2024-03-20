@@ -19,16 +19,36 @@
     max-width: 900px;
 }
 
-.cards {
+.cardCont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+
+}
+
+.cards1,
+.cards2 {
     display: flex;
     align-items: center;
     gap: 8px;
     width: 100%;
 }
-
-
-@media (max-width: 950px) {
-    .cards {
+.cards1{
+    align-items: end;
+}
+.cards2{
+    align-items: start;
+}
+@media (max-width: 1024px) {
+    .cardCont{
+        gap: 16px;
+    }
+    .cards1, .cards2 {
         flex-direction: column;
+    }
+    .cards1 div, .cards2 div{
+        width: 100%;
+        flex: 1;
     }
 }

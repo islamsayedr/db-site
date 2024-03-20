@@ -39,9 +39,9 @@ export default function Header() {
             {/* <li className={`${styles.navLink} navLink`}>
               <NavLink to="process">كيف يتم الامر</NavLink>
             </li> */}
-            {/* <li className={`${styles.navLink} navLink`}>
-              <NavLink to="prices">الاسعار</NavLink>
-            </li> */}
+            <li className={`${styles.navLink} navLink`}>
+              <NavLink to="prices">الباقات</NavLink>
+            </li>
             {/* <li className={`${styles.navLink} navLink`}>
               <NavLink to="blogs">المدونة</NavLink>
             </li> */}
@@ -77,9 +77,10 @@ const SideBar = (openSideBar) => {
         {/* <li className={`${styles.navLink} navLink`}>
           <NavLink to="process">كيف يتم الامر</NavLink>
         </li> */}
-        {/* <li className={`${styles.navLink} navLink`}>
-          <NavLink to="prices">الاسعار</NavLink>
+        <li className={`${styles.navLink} navLink`}>
+          <NavLink to="prices">الباقات</NavLink>
         </li>
+        {/* 
         <li className={`${styles.navLink} navLink`}>
           <NavLink to="blogs">المدونة</NavLink>
         </li>

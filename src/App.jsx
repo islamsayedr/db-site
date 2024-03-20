@@ -6,7 +6,7 @@ import AboutUs from "./pages/AboutUs";
 import Apply from "./pages/ApplyNow";
 
 // import Services from "./pages/Services";
-// import OurPrices from "./pages/OurPrices";
+import OurPrices from "./pages/OurPrices";
 import OurProcess from "./pages/OurProcess";
 import OurProjects from "./pages/OurProjects";
 
@@ -27,7 +27,7 @@ function App() {
         <Routes>
           <Route index element={<Home baseURL={baseURL} />} />
           {/* <Route path="Services" element={<Services />} /> */}
-          {/* <Route path="prices" element={<OurPrices />} /> */}
+          <Route path="prices" element={<OurPrices />} />
           {/* <Route path="process" element={<OurProcess />} /> */}
           <Route path="projects" element={<OurProjects baseURL={baseURL} />} />
           {/* <Route path="blogs" element={<Blog  baseURL={baseURL} />} /> */}
