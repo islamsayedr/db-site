@@ -42,7 +42,7 @@
 }
 @media (max-width: 1024px) {
     .cardCont{
-        gap: 16px;
+        gap: 8px;
     }
     .cards1, .cards2 {
         flex-direction: column;

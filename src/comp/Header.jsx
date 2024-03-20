@@ -77,8 +77,8 @@ const SideBar = (openSideBar) => {
         {/* <li className={`${styles.navLink} navLink`}>
           <NavLink to="process">كيف يتم الامر</NavLink>
         </li> */}
-        <li className={`${styles.navLink} navLink`}>
-          <NavLink to="prices">الباقات</NavLink>
+        <li className={`${styles.navLink} navLink`} onClick={openSideBar}>
+          ><NavLink to="prices">الباقات</NavLink>
         </li>
         {/* 
         <li className={`${styles.navLink} navLink`}>
