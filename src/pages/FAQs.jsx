@@ -9,7 +9,7 @@ export default function FAQs({ baseURL }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`${baseURL}/api/faqs?populate=*`);
+        const res = await fetch(`${baseURL}/api/faqs??pagination[page]=1&pagination[pageSize]=50`);
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
         }
@@ -32,19 +32,81 @@ export default function FAQs({ baseURL }) {
           <img src="./assets/dotIcon.svg" alt="dotIcon" />
           <h2>الاسئلة المتكررة</h2>
         </div>
-        <p>اليك اجابات على اكثر الاسئلة التى نتلقاها, فى حالة كان لديك اى تساؤل اخر لا تتردد فى التةاصل معنا عبر الواتس اب.</p>
-        {loading && <p>Loading...</p>}
+        <p>
+          اليك اجابات على اكثر الاسئلة التى نتلقاها, فى حالة كان لديك اى تساؤل
+          اخر لا تتردد فى التواصل معنا عبر الواتس اب.
+        </p>
+        {loading && (
+          <>
+            <img className={Styles.webSkelton} src="./imgs/faqweb.svg" />
+            <img className={Styles.mobSkelton} src="./imgs/faqmob.svg" />
+          </>
+        )}
         {error && <p>Error: {error}</p>}
         {!loading && !error && (
-          <div className={Styles.cards}>
-            {qus.map((article) => {
-              const id = article.id;
-              const qs = article.attributes.qs;
-              const answer = article.attributes.answer;
+          <>
+            <h3 className={Styles.title}>الأسئلة العامة </h3>
+            <div className={Styles.cards}>
+              {qus
+                .filter((article) => article.attributes.cate === "general")
+                .map((article) => {
+                  const id = article.id;
+                  const qs = article.attributes.qs;
+                  const answer = article.attributes.answer;
 
-              return <Qs key={id} qs={qs} answer={answer} />;
-            })}
-          </div>
+                  return <Qs key={id} qs={qs} answer={answer} />;
+                })}
+            </div>
+            <h3 className={Styles.title}>أسئلة باقة الشراكة مع الملكية</h3>
+            <div className={Styles.cards}>
+              {qus
+                .filter((article) => article.attributes.cate === "ownership")
+                .map((article) => {
+                  const id = article.id;
+                  const qs = article.attributes.qs;
+                  const answer = article.attributes.answer;
+
+                  return <Qs key={id} qs={qs} answer={answer} />;
+                })}
+            </div>
+            <h3 className={Styles.title}>أسئلة باقة الشراكة كخدمة</h3>
+            <div className={Styles.cards}>
+              {qus
+                .filter((article) => article.attributes.cate === "service")
+                .map((article) => {
+                  const id = article.id;
+                  const qs = article.attributes.qs;
+                  const answer = article.attributes.answer;
+
+                  return <Qs key={id} qs={qs} answer={answer} />;
+                })}
+            </div>
+
+            <h3 className={Styles.title}>أسئلة باقة المدير التقني التنفيذي</h3>
+            <div className={Styles.cards}>
+              {qus
+                .filter((article) => article.attributes.cate === "sto")
+                .map((article) => {
+                  const id = article.id;
+                  const qs = article.attributes.qs;
+                  const answer = article.attributes.answer;
+
+                  return <Qs key={id} qs={qs} answer={answer} />;
+                })}
+            </div>
+            <h3 className={Styles.title}>أسئلة باقة التطوير والدعم</h3>
+            <div className={Styles.cards}>
+              {qus
+                .filter((article) => article.attributes.cate === "support")
+                .map((article) => {
+                  const id = article.id;
+                  const qs = article.attributes.qs;
+                  const answer = article.attributes.answer;
+
+                  return <Qs key={id} qs={qs} answer={answer} />;
+                })}
+            </div>
+          </>
         )}
       </div>
     </section>

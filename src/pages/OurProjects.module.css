@@ -28,17 +28,21 @@
     padding: 8px;
 }
 
-.mobSkelton{
+.mobSkelton {
     display: none;
 }
-.webSkelton{
+
+.webSkelton {
     display: flex;
+    max-width: 100%;
 }
-@media(max-width: 768px){
-    .mobSkelton{
+
+@media(max-width: 768px) {
+    .mobSkelton {
         display: flex;
     }
-    .webSkelton{
+
+    .webSkelton {
         display: none;
     }
 }

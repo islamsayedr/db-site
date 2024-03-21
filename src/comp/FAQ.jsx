@@ -32,11 +32,22 @@ export default function FAQ({ baseURL }) {
           <img src="./assets/dotIcon.svg" alt="dotIcon" />
           <h2>الاسئلة المتكررة</h2>
         </div>
-        {loading && <p>Loading...</p>}
+        {loading && (
+          <>
+            <img
+              className={Styles.webSkelton}
+              src="./imgs/faqweb.svg"
+            />
+            <img
+              className={Styles.mobSkelton}
+              src="./imgs/faqmob.svg"
+            />
+          </>
+        )}
         {error && <p>Error: {error}</p>}
         {!loading && !error && (
           <div className={Styles.cards}>
-            {qus.slice(-5).map((article) => {
+            {qus.filter(article => article.attributes.cate === 'general').map((article) => {
               const id = article.id;
               const qs = article.attributes.qs;
               const answer = article.attributes.answer;

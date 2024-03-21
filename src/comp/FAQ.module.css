@@ -30,21 +30,45 @@
     text-align: right;
     cursor: pointer;
 }
-.qs{
+
+.qs {
     display: flex;
 }
-.qs h3{
+
+.qs h3 {
     flex: 1;
     color: var(--b60);
 }
-.qs span{
-    height: 24px ;
+
+.qs span {
+    height: 24px;
 }
-.qs span svg{
-    height: 24px ;
+
+.qs span svg {
+    height: 24px;
 }
-.answer{
+
+.answer {
     display: none;
     color: var(--b60);
-    
+
+}
+
+.mobSkelton {
+    display: none;
+}
+
+.webSkelton {
+    display: flex;
+    max-width: 100%;
+}
+
+@media(max-width: 768px) {
+    .mobSkelton {
+        display: flex;
+    }
+
+    .webSkelton {
+        display: none;
+    }
 }

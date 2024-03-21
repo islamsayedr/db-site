@@ -33,7 +33,18 @@ export default function OurProjects({ baseURL }) {
           <img src="./assets/dotIcon.svg" alt="dotIcon" />
           <h2>قائمة المشاريع</h2>
         </div>
-        {loading && <><img className={Styles.webSkelton} src="./imgs/projectSkeltonWeb.svg"/><img className={Styles.mobSkelton} src="./imgs/projectSkeltonMob.svg"/></>}
+        {loading && (
+          <>
+            <img
+              className={Styles.webSkelton}
+              src="./imgs/projectSkeltonWeb.svg"
+            />
+            <img
+              className={Styles.mobSkelton}
+              src="./imgs/projectSkeltonMob.svg"
+            />
+          </>
+        )}
         {error && <p>Error: {error}</p>}
         {!loading && !error && (
           <div className={Styles.cards}>

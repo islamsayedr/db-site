@@ -12,7 +12,8 @@
     z-index: 9999999999999;
     margin-top: 40px;
 }
-.ad{
+
+.ad {
     display: flex;
     width: 100%;
     align-items: center;
@@ -20,11 +21,11 @@
     margin: auto;
     background-color: var(--brandMain);
     color: var(--white);
-    padding: 8px;
+    padding: 8px 20px;
     position: fixed;
     z-index: 9999999999999;
 
-    
+
 }
 
 .header .secCont {
@@ -62,7 +63,8 @@
 .navLink a {
     color: var(--w60);
 }
-.logo{
+
+.logo {
     margin-bottom: -7px;
 }
 
@@ -79,7 +81,7 @@
     padding-top: 24px;
 }
 
-.sideBar ul.sideBarLinks li.navLink a{
+.sideBar ul.sideBarLinks li.navLink a {
     display: flex;
     height: 50px;
     align-items: center;
