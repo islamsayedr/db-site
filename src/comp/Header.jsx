@@ -9,6 +9,7 @@ export default function Header() {
   }
   return (
     <>
+    <span className={styles.ad}>!نعتذر اذا حدث خطأ, فنحن نعمل على تحديث الموقع حاليا</span>
       <header className={styles.header}>
         <div className={styles.secCont}>
           <img

@@ -10,6 +10,21 @@
     padding: 0 40px;
     position: fixed;
     z-index: 9999999999999;
+    margin-top: 40px;
+}
+.ad{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background-color: var(--brandMain);
+    color: var(--white);
+    padding: 8px;
+    position: fixed;
+    z-index: 9999999999999;
+
+    
 }
 
 .header .secCont {
