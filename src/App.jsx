@@ -1,13 +1,13 @@
 import Home from "./pages/Home";
 // import Blog from "./pages/Blog";
-import ApplyNow from "./pages/ApplyNow";
+// import ApplyNow from "./pages/ApplyNow";
 import NoPage from "./pages/NoPage";
 import AboutUs from "./pages/AboutUs";
-import Apply from "./pages/ApplyNow";
+// import Apply from "./pages/ApplyNow";
 
 // import Services from "./pages/Services";
 import OurPrices from "./pages/OurPrices";
-import OurProcess from "./pages/OurProcess";
+// import OurProcess from "./pages/OurProcess";
 import OurProjects from "./pages/OurProjects";
 
 import "./App.css";
@@ -16,6 +16,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./comp/Footer";
 import WhatsApp from "./comp/WhatsApp";
 import FAQs from "./pages/FAQs";
+import PlanDetails from "./pages/PlanDetails";
 // import ArticleDetails from "./pages/ArticleDetails";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route index element={<Home baseURL={baseURL} />} />
           {/* <Route path="Services" element={<Services />} /> */}
           <Route path="prices" element={<OurPrices />} />
+          <Route path="prices/:plan" element={<PlanDetails />} />
           {/* <Route path="process" element={<OurProcess />} /> */}
           <Route path="projects" element={<OurProjects baseURL={baseURL} />} />
           {/* <Route path="blogs" element={<Blog  baseURL={baseURL} />} /> */}

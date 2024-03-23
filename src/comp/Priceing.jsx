@@ -54,7 +54,7 @@ export default function Pricing() {
               ]}
             />
             <PricingCard
-              title="باقة المدير التقني التنفيذي CTO)"
+              title="باقة المدير التقني التنفيذي (CTO)"
               sub="عقد شهرى"
               points={[
                 " بقيادة سمير الجيبان بخبرة أكثر من 25 سنة",

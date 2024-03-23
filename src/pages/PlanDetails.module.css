@@ -1,0 +1,9 @@
+.back{
+    color: var(--brandMain);
+    height: 32px;
+    font-weight: 800px;
+    cursor: pointer;
+}
+.container{
+    align-items: start !important;
+}
