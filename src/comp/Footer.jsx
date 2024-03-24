@@ -8,7 +8,7 @@ export default function Footer() {
         <div className={Styles.body}>
           <div className={Styles.siteLinks}>
             <div className={Styles.brand}>
-              <img src="./assets/logo.svg" alt="" />
+              <img src="/assets/logo.svg" alt="" />
               <p>
                 نحن شركاؤك التقنيين، نتولى الجانب التقني بالكامل، بما في ذلك
                 إعداد البيئة المناسبة وتطوير منتجك التقني وتقديم الدعم المستمر.
@@ -56,10 +56,10 @@ export default function Footer() {
               <img src="./icons/insta.svg" alt="instagram icon" />
             </a> */}
                   <a href="https://x.com/dreamybuilders?s=11" rel="noreferrer" target="_blank">
-                    <img src="./icons/twitter.svg" alt="twitter icon" />
+                    <img src="/icons/twitter.svg" alt="twitter icon" />
                   </a>
                   <a href="https://www.linkedin.com/company/dreamy-builders/" rel="noreferrer" target="_blank">
-                    <img src="./icons/linkedin.svg" alt="linkedin icon" />
+                    <img src="/icons/linkedin.svg" alt="linkedin icon" />
                   </a>
                   {/* <a href="#">
               <img src="./icons/yt.svg" alt="youtuble icon" />
@@ -75,7 +75,7 @@ export default function Footer() {
       </div>
       <img
         className={Styles.bgObject01}
-        src="./assets/bgObject03.svg"
+        src="/assets/bgObject03.svg"
         alt="bg art"
       />
     </section>

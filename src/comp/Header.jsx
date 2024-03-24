@@ -1,6 +1,6 @@
 import { Outlet, NavLink, Link } from "react-router-dom";
 import styles from "./Header.module.css";
-// import Btn from "./Btn";
+import Btn from "./Btn";
 import { useState } from "react";
 export default function Header() {
   const [sideBarOpen, setSideBarOpen] = useState(false);
@@ -14,7 +14,7 @@ export default function Header() {
         <div className={styles.secCont}>
           <img
             className={styles.burgerMneu}
-            src={sideBarOpen === true ? "./icons/x.svg" : "./assets/menu.svg"}
+            src={sideBarOpen === true ? "/icons/x.svg" : "/assets/menu.svg"}
             alt="burger menu"
             onClick={openSideBar}
             style={{ cursor: "pointer" }}
@@ -22,7 +22,7 @@ export default function Header() {
           <Link to="/">
             <img
               className={styles.logo}
-              src="./assets/logo.svg"
+              src="/assets/logo.svg"
               alt="dearmy builder logo"
             />
           </Link>
@@ -56,7 +56,7 @@ export default function Header() {
               <NavLink to="faqs">الاسئلة المتكررة</NavLink>
             </li>
           </ul>
-          {/* <Btn text="قدم طلب" to="apply" /> */}
+          <Btn text="الباقات" to="prices" />
         </div>
       </header>
       {sideBarOpen ? <SideBar openSideBar={openSideBar} /> : null}

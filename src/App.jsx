@@ -1,6 +1,6 @@
 import Home from "./pages/Home";
 // import Blog from "./pages/Blog";
-// import ApplyNow from "./pages/ApplyNow";
+import ApplyNow from "./pages/ApplyNow";
 import NoPage from "./pages/NoPage";
 import AboutUs from "./pages/AboutUs";
 // import Apply from "./pages/ApplyNow";
@@ -30,13 +30,13 @@ function App() {
           <Route index element={<Home baseURL={baseURL} />} />
           {/* <Route path="Services" element={<Services />} /> */}
           <Route path="prices" element={<OurPrices />} />
-          <Route path="prices/:plan" element={<PlanDetails />} />
+          <Route path="prices/:plan" element={<PlanDetails baseURL={baseURL} />} />
           {/* <Route path="process" element={<OurProcess />} /> */}
           <Route path="projects" element={<OurProjects baseURL={baseURL} />} />
           {/* <Route path="blogs" element={<Blog  baseURL={baseURL} />} /> */}
           {/* <Route path="blogs/:id" element={<ArticleDetails  baseURL={baseURL} />} /> */}
           <Route path="aboutUs" element={<AboutUs baseURL={baseURL} />} />
-          {/* <Route path="applyNow" element={<ApplyNow />} /> */}
+          <Route path="applyNow" element={<ApplyNow />} />
           {/* <Route path="apply" element={<Apply />} /> */}
           <Route path="faqs" element={<FAQs baseURL={baseURL} />} />
           <Route path="*" element={<NoPage />} />

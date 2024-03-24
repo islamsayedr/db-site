@@ -1,27 +1,12 @@
 import Styles from "./PricingCard.module.css";
 import Btn from "./Btn";
 
-export default function PricingCard({ title, sub, points, type }) {
-  var cardStyle = {};
-  var btnType = "";
-  if (type === "main") {
-    cardStyle = {
-      padding: "56px",
-      backgroundColor: "var(--brandDark)",
-      color: "var(--white)",
-      flex: "1.5",
-      boxShadow: "var(--mainShadow)",
-    };
-    btnType = "p";
-  } else {
-    cardStyle = {
-      height: "fit-content",
-    };
-    btnType = "wbg";
+export default function PricingCard({ title, sub, points, action, actionName }) {
+  if (!points || !Array.isArray(points)) {
+    return null; // or handle the case where points is not valid
   }
-
   return (
-    <div className={Styles.card} style={cardStyle}>
+    <div className={Styles.card}>
       <div className={Styles.head}>
         <span>{sub}</span>
         <h3>{title}</h3>
@@ -30,13 +15,13 @@ export default function PricingCard({ title, sub, points, type }) {
         {points.map((point) => {
           return (
             <div className={Styles.point} key={point}>
-              <img src="./icons/check.svg" alt="check icon" />
+              <img src="/icons/check.svg" alt="check icon" />
               <span>{point}</span>
             </div>
           );
         })}
       </div>
-      {/* <Btn text="ابدأ الان" to="/apply" type={btnType} /> */}
+      <Btn text={actionName} to={action}type="wbg"/>
     </div>
   );
 }

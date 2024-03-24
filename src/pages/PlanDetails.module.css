@@ -6,4 +6,36 @@
 }
 .container{
     align-items: start !important;
+    gap: 24px;
+}
+.card{
+    display: flex;
+    width: 100%;
+
+}
+.card:first-child{
+    width: 100% !important;
+}
+.qs{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.mobSkelton {
+    display: none;
+}
+
+.webSkelton {
+    display: flex;
+    max-width: 100%;
+}
+
+@media(max-width: 768px) {
+    .mobSkelton {
+        display: flex;
+    }
+
+    .webSkelton {
+        display: none;
+    }
 }

@@ -2,6 +2,7 @@ import Styles from "./Pricing.module.css";
 import PricingCard from "./PricingCard";
 
 export default function Pricing() {
+  
   return (
     <section className={Styles.whydb}>
       <div className={`secContainer ${Styles.container}`}>
@@ -28,6 +29,8 @@ export default function Pricing() {
                 "ملكية بين ٢٠٪ و٢٥٪",
                 "سعر تطوير مخفض بنسبة ٥٠٪",
               ]}
+              action="/prices/ownership"
+              actionName="عرض التفاصيل"
             />
             <PricingCard
               title="باقة الشراكة التقنية كخدمة"
@@ -41,9 +44,11 @@ export default function Pricing() {
                 "سعر شهري منافس",
                 "إمكانية الترقية إلى شريك بملكية بعد التحقق من الصحة",
               ]}
+              action="/prices/service"
+              actionName="عرض التفاصيل"
             />
           </div>
-          <div className={Styles.cards2}>
+          {/* <div className={Styles.cards2}>
             <PricingCard
               title="باقة التطوير والدعم"
               sub="عقد نصف سنوي"
@@ -62,7 +67,7 @@ export default function Pricing() {
                 " سعر بالساعة حسب الحاجة ",
               ]}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
