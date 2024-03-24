@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import Styles from "./PlanDetails.module.css";
 import PricingCard from "../comp/PricingCard";
-import Qs from "../comp/QS";
+import Qs from "../comp/Qs.jsx";
 import { useEffect, useState } from "react";
 
 export default function PlanDetails({ baseURL }) {
