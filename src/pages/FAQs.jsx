@@ -81,7 +81,7 @@ export default function FAQs({ baseURL }) {
                   return <Qs key={id} qs={qs} answer={answer} />;
                 })}
             </div>
-
+{/* 
             <h3 className={Styles.title}>أسئلة باقة المدير التقني التنفيذي</h3>
             <div className={Styles.cards}>
               {qus
@@ -105,7 +105,7 @@ export default function FAQs({ baseURL }) {
 
                   return <Qs key={id} qs={qs} answer={answer} />;
                 })}
-            </div>
+            </div> */}
           </>
         )}
       </div>
