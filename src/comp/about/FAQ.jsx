@@ -1,7 +1,7 @@
-import Btn from "./Btn";
+import Btn from "../shared/Btn";
 import Styles from "./FAQ.module.css";
 import { useEffect, useState } from "react";
-import Qs from "./Qs"
+import Qs from "./Qs";
 export default function FAQ({ baseURL }) {
   const [qus, setQus] = useState([]);
   const [loading, setLoading] = useState(true);

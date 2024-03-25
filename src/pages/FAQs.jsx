@@ -1,4 +1,4 @@
-import Styles from "../comp/FAQ.module.css";
+import Styles from "../comp/about/FAQ.module.css";
 import { useEffect, useState } from "react";
 
 export default function FAQs({ baseURL }) {

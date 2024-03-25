@@ -1,5 +1,5 @@
 import Styles from "./ProcessCard.module.css";
-import Btn from "./Btn";
+import Btn from "../shared/Btn";
 import { useState } from "react";
 
 export default function ProcessCard({ title, des, icon, order }) {

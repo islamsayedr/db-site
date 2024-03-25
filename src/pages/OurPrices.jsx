@@ -1,5 +1,5 @@
-import Pricing from "../comp/Priceing";
+import Pricing from "../comp/pricing/Priceing";
 
 export default function OurPrices() {
-  return <Pricing />
+  return <Pricing />;
 }

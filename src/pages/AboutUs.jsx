@@ -1,5 +1,5 @@
 import Styles from "./AboutUs.module.css";
-import AboutCard from "../comp/AboutCard";
+import AboutCard from "../comp/about/AboutCard";
 // import TeamMember from "../comp/TeamMember";
 // import { useEffect, useState } from "react";
 

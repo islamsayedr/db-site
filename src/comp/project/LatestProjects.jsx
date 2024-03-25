@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Styles from "./LatestProjects.module.css";
 import ProjectCard from "./ProjectCard";
-import Btn from "./Btn";
+import Btn from "../shared/Btn";
 
 export default function LatestProjects({ baseURL }) {
   const [projects, setProjects] = useState([]);
@@ -34,7 +34,18 @@ export default function LatestProjects({ baseURL }) {
           <img src="./assets/dotIcon.svg" alt="dotIcon" />
           <h2>احدث المشاريع</h2>
         </div>
-        {loading && <><img className={Styles.webSkelton} src="./imgs/projectSkeltonWeb.svg"/><img className={Styles.mobSkelton} src="./imgs/projectSkeltonMob.svg"/></>}
+        {loading && (
+          <>
+            <img
+              className={Styles.webSkelton}
+              src="./imgs/projectSkeltonWeb.svg"
+            />
+            <img
+              className={Styles.mobSkelton}
+              src="./imgs/projectSkeltonMob.svg"
+            />
+          </>
+        )}
         {error && <p>Error: {error}</p>}
         {!loading && !error && (
           <div className={Styles.cards}>

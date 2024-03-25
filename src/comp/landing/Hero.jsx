@@ -1,4 +1,4 @@
-import Btn from "./Btn";
+import Btn from "../shared/Btn";
 import Styles from "./Hero.module.css";
 export default function Hero() {
   return (
@@ -13,7 +13,7 @@ export default function Hero() {
             ونقوم بتوفير كل ما تحتاجه لنضمن لك النجاح التقني
           </p>
         </div>
-        <Btn text="عرض الباقات" to="prices" type="bp" />
+        <Btn text="تقديم" to="prices" type="bp" />
       </div>
       <video
         className={Styles.heroVideo}

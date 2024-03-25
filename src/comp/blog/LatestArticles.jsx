@@ -43,15 +43,17 @@ export default function LatestArticles({ baseURL }) {
                 const id = article.id;
                 const cover = `${baseURL}${article.attributes.cover.data.attributes.url}`;
                 const title = article.attributes.title;
-                const date = new Date(article.attributes.createdAt).toLocaleDateString('ar-EG');
+                const date = new Date(
+                  article.attributes.createdAt
+                ).toLocaleDateString("ar-EG");
                 return (
-                <Link to={`/blogs/${id}`} key={id} className={Styles.article}>
-                  <ArticleCard
-                    key={id}
-                    cover={cover}
-                    title={title}
-                    date={date}
-                  />
+                  <Link to={`/blogs/${id}`} key={id} className={Styles.article}>
+                    <ArticleCard
+                      key={id}
+                      cover={cover}
+                      title={title}
+                      date={date}
+                    />
                   </Link>
                 );
               })}

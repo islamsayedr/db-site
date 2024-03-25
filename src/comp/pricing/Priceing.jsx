@@ -2,7 +2,6 @@ import Styles from "./Pricing.module.css";
 import PricingCard from "./PricingCard";
 
 export default function Pricing() {
-  
   return (
     <section className={Styles.whydb}>
       <div className={`secContainer ${Styles.container}`}>

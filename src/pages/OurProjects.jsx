@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Styles from "./OurProjects.module.css";
-import ProjectCard from "../comp/ProjectCard";
+import ProjectCard from "../comp/project/ProjectCard";
 
 export default function OurProjects({ baseURL }) {
   const [projects, setProjects] = useState([]);

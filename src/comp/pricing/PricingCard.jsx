@@ -1,5 +1,5 @@
 import Styles from "./PricingCard.module.css";
-import Btn from "./Btn";
+import Btn from "../shared/Btn";
 
 export default function PricingCard({ title, sub, points, action, actionName }) {
   if (!points || !Array.isArray(points)) {

@@ -11,10 +11,10 @@ import OurPrices from "./pages/OurPrices";
 import OurProjects from "./pages/OurProjects";
 
 import "./App.css";
-import Header from "./comp/Header";
+import Header from "./comp/shared/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Footer from "./comp/Footer";
-import WhatsApp from "./comp/WhatsApp";
+import Footer from "./comp/shared/Footer";
+import WhatsApp from "./comp/shared/WhatsApp";
 import FAQs from "./pages/FAQs";
 import PlanDetails from "./pages/PlanDetails";
 // import ArticleDetails from "./pages/ArticleDetails";

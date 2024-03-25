@@ -1,4 +1,4 @@
-import Btn from "./Btn";
+import Btn from "../shared/Btn";
 import Styles from "./JoinUs.module.css";
 export default function JoinUs() {
   return (

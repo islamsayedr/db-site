@@ -1,5 +1,5 @@
 import Styles from "./NoPage.module.css";
-import Btn from "../comp/Btn";
+import Btn from "../comp/shared/Btn";
 
 export default function NoPage() {
   return (
