@@ -7,7 +7,7 @@ import Pricing from "../comp/pricing/Priceing.jsx";
 import Review from "../comp/landing/Review.jsx";
 import LatestArticles from "../comp/blog/LatestArticles.jsx";
 import FAQ from "../comp/about/FAQ.jsx";
-import ApplyNow from "./ApplyNow.jsx";
+import ApplyNow from "./archive/ApplyNow.jsx";
 
 export default function Home({ baseURL }) {
   return (

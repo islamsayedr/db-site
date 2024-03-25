@@ -1,4 +1,4 @@
-import Styles from "./ApplyNow.module.css";
+// import Styles from "./ApplyNow.module.css";
 import { useState } from "react";
 import axios from "axios";
 
