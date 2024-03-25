@@ -1,7 +1,7 @@
 import Home from "./pages/Home";
 // import Blog from "./pages/Blog";
 import ApplyNow from "./pages/ApplyNow";
-import NoPage from "./pages/NoPage";
+import NoPage from "./pages/general/NoPage";
 import AboutUs from "./pages/AboutUs";
 // import Apply from "./pages/ApplyNow";
 
