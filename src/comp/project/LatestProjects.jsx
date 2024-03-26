@@ -32,7 +32,7 @@ export default function LatestProjects({ baseURL }) {
       <div className={`secContainer ${Styles.container}`}>
         <div className={Styles.title}>
           <img src="./assets/dotIcon.svg" alt="dotIcon" />
-          <h2>احدث المشاريع</h2>
+          <h2>احدث الشراكات</h2>
         </div>
         {loading && (
           <>

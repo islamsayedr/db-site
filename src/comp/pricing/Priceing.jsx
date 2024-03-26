@@ -26,10 +26,10 @@ export default function Pricing() {
                 "إنشاء وإدارة البريد الإلكتروني وربطه بنطاق المنشأة",
                 "دعم تقني وصيانة",
                 "حصة أسهم مناسبة",
-                "سعر تطوير مخفض بنسبة ٥٠٪ لمدة سنة",
+                "تحمل ٥٠٪ من التكاليف لمدة سنة",
               ]}
               action="/prices/ownership"
-              actionName="قدم الأن"
+              actionName="قدم الآن"
             />
             <PricingCard
               title="باقة الشراكة التقنية كخدمة"
@@ -44,7 +44,7 @@ export default function Pricing() {
                 "إمكانية التحول إلى شريك تقني كامل بعد التحقق من الفكرة/المنتج",
               ]}
               action="/prices/service"
-              actionName="قدم الأن"
+              actionName="قدم الآن"
             />
           </div>
           {/* <div className={Styles.cards2}>

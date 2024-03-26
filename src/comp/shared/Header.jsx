@@ -46,9 +46,6 @@ export default function Header() {
             {/* <li className={`${styles.navLink} navLink`}>
               <NavLink to="blogs">المدونة</NavLink>
             </li> */}
-            {/* <li className={`${styles.navLink} navLink`}>
-              <NavLink to="aboutUs">الأسئلة المتكررة</NavLink>
-            </li> */}
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="aboutUs">تعرف علينا</NavLink>
             </li>
