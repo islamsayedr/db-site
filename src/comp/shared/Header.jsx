@@ -35,7 +35,7 @@ export default function Header() {
               <NavLink to="Services">خدماتنا</NavLink>
             </li> */}
             <li className={`${styles.navLink} navLink`}>
-              <NavLink to="projects">اعمالنا</NavLink>
+              <NavLink to="projects">شراكاتنا</NavLink>
             </li>
             {/* <li className={`${styles.navLink} navLink`}>
               <NavLink to="process">كيف يتم الامر</NavLink>
