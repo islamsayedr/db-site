@@ -11,10 +11,10 @@ export default function ApplyForService() {
     data: {
       name: "",
       email: "",
-      phone: "",
-      project: "",
-      type: "خدمة",
-      state: "",
+      whatsapp: "",
+      phase: "",
+      developmentBudget: "",
+      description: "",
     },
   });
 
@@ -33,7 +33,7 @@ export default function ApplyForService() {
 
     try {
       const response = await axios.post(
-        "https://dreamy-backend.azurewebsites.net/api/req",
+        "https://dreamy-backend.azurewebsites.net/api/service-reqs",
         // "http://localhost:1337/api/req",
         formData
       );
@@ -43,10 +43,10 @@ export default function ApplyForService() {
         data: {
           name: "",
           email: "",
-          phone: "",
-          project: "",
-          type: "خدمة",
-          state: "",
+          whatsapp: "",
+          phase: "",
+          developmentBudget: "",
+          description: "",
         },
       });
       navigate("/requestConfirmation");
@@ -86,47 +86,22 @@ export default function ApplyForService() {
               />
             </div>
             <div className={Styles.input}>
-              <label htmlFor="phone">رقم الهاتف</label>
+              <label htmlFor="whatsapp">رقم الواتس اب</label>
               <input
                 type="tel"
-                name="phone"
-                placeholder="ادخل رقم الهاتف هنا..."
-                value={formData.data.phone}
+                name="whatsapp"
+                placeholder="ادخل رقم الهاتف المرتبط بواتس اب هنا..."
+                value={formData.data.whatsapp}
                 onChange={handleChange}
               />
             </div>
           </div>
 
-          {/* <div className={Styles.input}>
-            <label htmlFor="type">نوع الطلب</label>
-            <div className={Styles.radioBtn}>
-              <label>
-                <input
-                  type="radio"
-                  name="type"
-                  value="شراكة تقنية مقابل ملكية"
-                  checked={formData.data.type === "شراكة تقنية مقابل ملكية"}
-                  onChange={handleChange}
-                />
-                شراكة تقنية مقابل ملكية
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="type"
-                  value="شراكة تقنية كخدمة"
-                  checked={formData.data.type === "شراكة تقنية كخدمة"}
-                  onChange={handleChange}
-                />
-                شراكة تقنية كخدمة
-              </label>
-            </div>
-          </div> */}
           <div className={Styles.input}>
-            <label htmlFor="state">في أي مرحلة أنت الآن؟</label>
+            <label htmlFor="phase">في أي مرحلة أنت الآن؟</label>
             <select
-              name="state"
-              value={formData.data.state}
+              name="phase"
+              value={formData.data.phase}
               onChange={handleChange}
             >
               <option className={Styles.option} value="">
@@ -151,11 +126,23 @@ export default function ApplyForService() {
           </div>
 
           <div className={Styles.input}>
-            <label htmlFor="project">وصف</label>
+            <label htmlFor="developmentBudget">
+              ماهي ميزانية التطوير التقريبية؟ (خياري)
+            </label>
+            <input
+              type="number"
+              name="developmentBudget"
+              placeholder="اكتب الرقم بالريال  هنا..."
+              value={formData.data.developmentBudget}
+              onChange={handleChange}
+            />
+          </div>
+          <div className={Styles.input}>
+            <label htmlFor="description">وصف</label>
             <textarea
-              name="project"
+              name="description"
               placeholder="اكتب تفاصيل المشروع هنا..."
-              value={formData.data.project}
+              value={formData.data.description}
               onChange={handleChange}
             />
           </div>

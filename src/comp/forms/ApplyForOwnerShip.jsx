@@ -1,6 +1,6 @@
 import Styles from "./ApplyNow.module.css";
 import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
 
@@ -11,10 +11,13 @@ export default function ApplyForOwnerShip() {
     data: {
       name: "",
       email: "",
-      phone: "",
-      project: "",
-      type: "مقابل ملكية",
-      state: "",
+      whatsapp: "",
+      linkedin: "",
+      phase: "",
+      validation: "",
+      projectBudget: "",
+      developmentBudget: "",
+      description: "",
     },
   });
 
@@ -33,7 +36,7 @@ export default function ApplyForOwnerShip() {
 
     try {
       const response = await axios.post(
-        "https://dreamy-backend.azurewebsites.net/api/req",
+        "https://dreamy-backend.azurewebsites.net/api/ownership-reqs",
         // "http://localhost:1337/api/req",
         formData
       );
@@ -43,10 +46,13 @@ export default function ApplyForOwnerShip() {
         data: {
           name: "",
           email: "",
-          phone: "",
-          project: "",
-          type: "مقابل ملكية",
-          state: "",
+          whatsapp: "",
+          linkedin: "",
+          phase: "",
+          validation: "",
+          projectBudget: "",
+          developmentBudget: "",
+          description: "",
         },
       });
       navigate("/requestConfirmation");
@@ -86,47 +92,32 @@ export default function ApplyForOwnerShip() {
               />
             </div>
             <div className={Styles.input}>
-              <label htmlFor="phone">رقم الهاتف</label>
+              <label htmlFor="whatsapp">رقم الواتس اب</label>
               <input
                 type="tel"
-                name="phone"
-                placeholder="ادخل رقم الهاتف هنا..."
-                value={formData.data.phone}
+                name="whatsapp"
+                placeholder="ادخل رقم الهاتف المرتبط بواتس اب هنا..."
+                value={formData.data.whatsapp}
                 onChange={handleChange}
               />
             </div>
           </div>
-
-          {/* <div className={Styles.input}>
-            <label htmlFor="type">نوع الطلب</label>
-            <div className={Styles.radioBtn}>
-              <label>
-                <input
-                  type="radio"
-                  name="type"
-                  value="شراكة تقنية مقابل ملكية"
-                  checked={formData.data.type === "شراكة تقنية مقابل ملكية"}
-                  onChange={handleChange}
-                />
-                شراكة تقنية مقابل ملكية
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="type"
-                  value="شراكة تقنية كخدمة"
-                  checked={formData.data.type === "شراكة تقنية كخدمة"}
-                  onChange={handleChange}
-                />
-                شراكة تقنية كخدمة
-              </label>
-            </div>
-          </div> */}
           <div className={Styles.input}>
-            <label htmlFor="state">في أي مرحلة أنت الآن؟</label>
+            <label htmlFor="linkedin">رابط لينكدان</label>
+            <input
+              type="text"
+              name="linkedin"
+              placeholder="اكتب رابط لينكدان هنا..."
+              value={formData.data.linkedin}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className={Styles.input}>
+            <label htmlFor="phase">في أي مرحلة أنت الآن؟</label>
             <select
-              name="state"
-              value={formData.data.state}
+              name="phase"
+              value={formData.data.phase}
               onChange={handleChange}
             >
               <option className={Styles.option} value="">
@@ -151,14 +142,83 @@ export default function ApplyForOwnerShip() {
           </div>
 
           <div className={Styles.input}>
-            <label htmlFor="project">وصف</label>
+            <label htmlFor="validation">هل تم التحقق من الفكرة وبأي طريقة؟</label>
+            <div className={Styles.radioBtn}>
+              <label>
+                <input
+                  type="radio"
+                  name="validation"
+                  value="لا, لم يتم التحقق"
+                  checked={formData.data.validation === "لا, لم يتم التحقق"}
+                  onChange={handleChange}
+                />
+                لا, لم يتم التحقق
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="validation"
+                  value="نعم, تم عن طريق تحقيق دخل معقول"
+                  checked={
+                    formData.data.validation === "نعم, تم عن طريق تحقيق دخل معقول"
+                  }
+                  onChange={handleChange}
+                />
+                نعم, تم عن طريق تحقيق دخل معقول
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="validation"
+                  value="نعم, تم عن طريق دخول مستثمر"
+                  checked={
+                    formData.data.validation === "نعم, تم عن طريق دخول مستثمر"
+                  }
+                  onChange={handleChange}
+                />
+                نعم, تم عن طريق دخول مستثمر
+              </label>
+            </div>
+          </div>
+
+          <div className={Styles.row}>
+            <div className={Styles.input}>
+              <label htmlFor="projectBudget">
+                ماهي ميزانية المشروع التقريبية؟ (خياري)
+              </label>
+              <input
+                type="number"
+                name="projectBudget"
+                placeholder="اكتب الرقم بالريال  هنا..."
+                value={formData.data.projectBudget}
+                onChange={handleChange}
+              />
+            </div>
+            
+            <div className={Styles.input}>
+              <label htmlFor="developmentBudget">
+                ماهي ميزانية التطوير التقريبية؟ (خياري)
+              </label>
+              <input
+                type="number"
+                name="developmentBudget"
+                placeholder="اكتب الرقم بالريال  هنا..."
+                value={formData.data.developmentBudget}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+
+          <div className={Styles.input}>
+            <label htmlFor="description">وصف</label>
             <textarea
-              name="project"
+              name="description"
               placeholder="اكتب تفاصيل المشروع هنا..."
-              value={formData.data.project}
+              value={formData.data.description}
               onChange={handleChange}
             />
           </div>
+
           <button type="submit" className="submit">
             {" "}
             ارسال الطلب
