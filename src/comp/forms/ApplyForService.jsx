@@ -138,10 +138,10 @@ export default function ApplyForService() {
             />
           </div>
           <div className={Styles.input}>
-            <label htmlFor="description">وصف</label>
+            <label htmlFor="description">وصف الطلب</label>
             <textarea
               name="description"
-              placeholder="اكتب تفاصيل المشروع هنا..."
+              placeholder="اكتب التفاصيل هنا..."
               value={formData.data.description}
               onChange={handleChange}
             />
