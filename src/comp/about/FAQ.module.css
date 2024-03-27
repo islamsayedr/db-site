@@ -48,12 +48,14 @@
     height: 24px;
 }
 
-.answer {
+.answer, .des {
     display: none;
     color: var(--b60);
 
 }
-
+.des img{
+    max-width: 100%;
+}
 .mobSkelton {
     display: none;
 }

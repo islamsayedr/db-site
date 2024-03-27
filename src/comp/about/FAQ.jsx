@@ -48,8 +48,9 @@ export default function FAQ({ baseURL }) {
                 const id = article.id;
                 const qs = article.attributes.qs;
                 const answer = article.attributes.answer;
+                const des = article.attributes.des;
 
-                return <Qs key={id} qs={qs} answer={answer} />;
+                return <Qs key={id} qs={qs} answer={answer} des ={des}/>;
               })}
           </div>
         )}
