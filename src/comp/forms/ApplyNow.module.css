@@ -122,4 +122,8 @@ button {
         flex-direction: column;
         gap: 24px;
     }
+    .radioBtn{
+        display: flex;
+        flex-direction: column;
+    }
 }
