@@ -35,7 +35,7 @@ export default function Header() {
               <NavLink to="Services">خدماتنا</NavLink>
             </li> */}
             <li className={`${styles.navLink} navLink`}>
-              <NavLink to="projects">اعمالنا</NavLink>
+              <NavLink to="projects">شراكاتنا</NavLink>
             </li>
             {/* <li className={`${styles.navLink} navLink`}>
               <NavLink to="process">كيف يتم الامر</NavLink>
@@ -45,9 +45,6 @@ export default function Header() {
             </li>
             {/* <li className={`${styles.navLink} navLink`}>
               <NavLink to="blogs">المدونة</NavLink>
-            </li> */}
-            {/* <li className={`${styles.navLink} navLink`}>
-              <NavLink to="aboutUs">الأسئلة المتكررة</NavLink>
             </li> */}
             <li className={`${styles.navLink} navLink`}>
               <NavLink to="aboutUs">تعرف علينا</NavLink>
