@@ -19,6 +19,8 @@ import FAQs from "./pages/FAQs";
 import PlanDetails from "./pages/PlanDetails";
 import ApplyForOwnerShip from "./comp/forms/ApplyForOwnerShip";
 import ApplyForService from "./comp/forms/ApplyForService";
+import ScrollToTop from './comp/shared/ScrollToTop.jsx'
+
 
 // import ArticleDetails from "./pages/ArticleDetails";
 
@@ -27,6 +29,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
+
         <Header />
         <div id="headerPlace"></div>
         <Routes>
@@ -53,7 +57,7 @@ function App() {
               <Status
                 img="/imgs/404.svg"
                 message="عذرا, هذة الصفحة غير متوفرة حاليا."
-                action ="/"
+                action="/"
               />
             }
           />
@@ -63,11 +67,10 @@ function App() {
               <Status
                 img="/imgs/confirm.svg"
                 message="تم تلقى الطلب بنجاح, يمكنك المتابعة عن طريق الواتس اب"
-                action ="/"
+                action="/"
               />
             }
           />
-          
         </Routes>
         <Footer />
         <WhatsApp />

@@ -43,7 +43,7 @@ export default function Pricing() {
                 "سعر شهري منافس",
                 "إمكانية التحول إلى شريك تقني كامل بعد التحقق من الفكرة/المنتج",
               ]}
-              action="/prices/service"
+              action="/prices/service/"
               actionName="قدم الآن"
             />
           </div>
